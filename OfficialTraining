@@ -1,0 +1,16 @@
+import com.sap.gateway.ip.core.customdev.util.Message
+import groovy.json.JsonOutput
+
+Message processData(Message message) {
+
+    def body = JsonOutput.toJson(
+            messageId: "${message.headers['SAP_MessageProcessingLogID']}",
+            timestamp: "${new Date().format('yyyy-MM-dd HH:mm:ss.SSS')}",
+            text: "For demonstration purposes only"
+    )
+
+    message.setBody(body)
+    message.setHeader('Content-Type', 'application/json')
+
+    return message
+}
