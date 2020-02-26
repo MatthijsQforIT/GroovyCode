@@ -18,7 +18,8 @@
  */
 import com.sap.gateway.ip.core.customdev.util.Message;
 import java.util.HashMap;
-import com.sap.it.op.agent.mpl.factory.impl.MessageLogFactoryImpl
+import com.sap.it.op.agent.mpl.factory.impl.MessageLogFactoryImpl;
+
 def Message processData(Message message) {
 	def messageLog = messageLogFactory.getMessageLog(message);
 	def bodyAsString = message.getBody(String.class);
