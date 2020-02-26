@@ -22,6 +22,6 @@ import java.util.HashMap;
 def Message processData(Message message) {
 	def messageLog = messageLogFactory.getMessageLog(message);
 	def bodyAsString = message.getBody(String.class);
-	messageLog.addAttachmentAsString("After Mapping", bodyAsString, "text/xml");	
+	messageLog.addAttachmentAsString("After Groovy", bodyAsString, "text/xml");	
 	return message;
 }
