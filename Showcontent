@@ -16,7 +16,9 @@
 	public void setProperty(java.lang.String name, java.lang.Object value)
  * 
  */
-
+import com.sap.gateway.ip.core.customdev.util.Message;
+import java.util.HashMap;
+import com.sap.it.op.agent.mpl.factory.impl.MessageLogFactoryImpl
 def Message processData(Message message) {
 	def messageLog = messageLogFactory.getMessageLog(message);
 	def bodyAsString = message.getBody(String.class);
