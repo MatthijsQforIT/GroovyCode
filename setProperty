@@ -1,0 +1,10 @@
+   import com.sap.gateway.ip.core.customdev.util.Message; 
+   import java.util.HashMap; 
+   import static java.util.UUID.randomUUID;  
+ 
+    def Message processData(Message message){
+   def body = message.getBody();
+   message.setProperty("succes", body);
+return message; 
+
+} 
