@@ -1,5 +1,6 @@
    import java.util.HashMap;
-   import com.sap.gateway.ip.core.customdev.util.Message; 
+   import com.sap.gateway.ip.core.customdev.util.Message;
+   import com.sap.gateway.ip.core.customdev.processor.MessageImpl;
  
     def Message processData(Message message){
    def body = message.getBody();
