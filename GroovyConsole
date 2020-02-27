@@ -1,3 +1,4 @@
 import java.util.HashMap;
  
-println "Hello World"
+set.body("Hello World")
+return message
