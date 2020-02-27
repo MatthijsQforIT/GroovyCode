@@ -1,1 +1,8 @@
-println "Hello World!"
+import com.atlassian.jira.component.ComponentAccessor;
+ 
+public Object getObject(String key) {
+        Class objectFacadeClass = ComponentAccessor.getPluginAccessor().getClassLoader().
+                                findClass("com.riadalabs.jira.plugins.insight.channel.external.api.facade.ObjectFacade");
+        def objectFacade = ComponentAccessor.getOSGiComponentInstanceOfType(objectFacadeClass);
+        return objectFacade.loadObjectBean(key);
+}
